@@ -2,7 +2,7 @@ body {
     font-family: 'Helvetica', sans-serif;
     background-image: url("backg.png"), url("green.gif");
     background-size: 120%;
-    background-position: center;
+    background-position: absolute;
     background-color: #c4c0b5;
     margin: 0;
     justify-content: center;
@@ -50,7 +50,8 @@ main {
 #headerArea img {
     width: 100%;
     padding-bottom: 5px;
-    padding-top: 10px;
+    padding-top: 20px;
+    border-radius: 35px 35px 0px 0px;
 }
 
 #flex {
