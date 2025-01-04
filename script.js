@@ -9,7 +9,7 @@ function typeWriter(text) {
         } else {
             clearInterval(interval);
         }
-    }, 60); // Interval of 100ms
+    }, 100); // Interval of 100ms
 }
 
 const text = document.getElementById("header").innerText;
