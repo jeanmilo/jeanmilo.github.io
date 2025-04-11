@@ -1,6 +1,14 @@
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-
+@media (max-width: 250px) {
+    body {
+        font-size: 10px;
+    }
+    aside {
+        font-size: 10px;
+    }
+    
+}
 body {
     font-family: 'Anonymous Pro', monospace;  
     color: #372e29;
@@ -131,6 +139,11 @@ a:hover{
     ;
 }
 
+#gif{
+    width: 80%;
+    max-width: 180px;
+}
+
 .blogpost {
     box-shadow: 20px;
 
@@ -143,7 +156,7 @@ a:hover{
     padding: 2px;
     margin: 1.4% 32%;
     text-align: center;
-    font-size: 13px;
+    font-size: 60%;
 }
 
 .image-container {
@@ -202,7 +215,6 @@ a:hover{
     
     #flex {
         display: flex;
-        max-width: 1000px;
     }
     
     aside {
