@@ -187,3 +187,47 @@ a:hover{
     height: 100%;
     opacity: 1;
 }
+
+@media (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+    
+    #flex {
+        display: flex;
+    }
+    
+    aside {
+        height: 100%;
+        font-size: 20px;
+        position: sticky;
+        margin-top: 0px;
+        margin-right: 6px;
+        padding: 2%;    
+        z-index: 999;
+        border-radius: 0px 0px 14px 14px;
+        text-align: right;
+        height: 100%;
+    }
+    
+    main {
+        width: calc(100% - 220px);
+        padding: 5%;
+    }
+    
+    .navbutton {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    #headerArea img {
+        border-radius: 40px 40px 0 0;
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 992px) {
+    #container {
+        max-width: 1000px;
+    }
+}
