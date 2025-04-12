@@ -136,6 +136,7 @@ a:hover{
 #gif{
     height: 80%;
     max-height: 170px;
+    min-height: 100px;
 }
 
 .blogpost {
