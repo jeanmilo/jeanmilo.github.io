@@ -1,15 +1,6 @@
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-@media (max-width: 470px) {
-    body {
-        font-size: 10px;
-    }
-    aside {
-        font-size: 10px;
-    }
-}
-
 body {
     font-family: 'Anonymous Pro', monospace;  
     color: #372e29;
@@ -38,6 +29,7 @@ aside {
 }
 
 main {
+    width: 80%;
     background-color: rgb(232, 229, 219);
     justify-content: center;
     margin-top: 0px;
@@ -138,9 +130,9 @@ a:hover{
 }
 
 #gif{
-    width: 80%;
+    width: 60%;
     max-width: 190px;
-    min-width: 115px;
+    min-width: 110px;
 }
 
 .footer {
@@ -180,6 +172,51 @@ a:hover{
     }
 }
 
+
+@media (max-width: 470px) {
+    body {
+        font-size: 10px;
+    }
+    aside {
+        font-size: 10px;
+    }
+    #gif{
+        width: 60%;
+        max-width: 130px;
+        min-width: 90px;
+    }
+}
+
+@media (max-width: 440px) {
+    body {
+        font-size: 10px;
+    }
+    
+    aside {
+        font-size: 10px;
+    }
+
+    #gif{
+        width: 60%;
+        max-width: 120px;
+        min-width: 70px;
+    }
+}
+
+@media (max-width: 270px) {
+    body {
+        font-size: 7px;
+    }
+    aside {
+        font-size: 7px;
+    }
+
+    #gif{
+        max-width: 90px;
+        min-width: 50px;
+    }
+}
+
 [title] {
     position: relative;
 }
@@ -212,14 +249,7 @@ a:hover{
     }
     
     aside {
-        font-size: 20px;
-        position: sticky;
-        margin-top: 0px;
-        margin-right: 6px;
-        padding: 2%;    
-        z-index: 999;
-        border-radius: 0px 0px 14px 14px;
-        height: 100%;
+        font-size: 19px;
     }
     
     main {
