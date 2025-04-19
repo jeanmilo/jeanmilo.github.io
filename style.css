@@ -144,19 +144,6 @@ a:hover{
     min-width: 115px;
 }
 
-.blogpost {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: rgba(244, 218, 85, 0.4);
-    margin: 1rem;
-    padding: 1.4rem;
-    border-radius: 12px;
-}
-
-.blogpost:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
 .footer {
     color: #2E2E2E;
     background-color: #e8e5db;
