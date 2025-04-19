@@ -11,6 +11,63 @@
     <!-- responsive web design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <style>
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+    .blogpost h4 {
+        font-family: 'Pangolin', sans-serif;
+        color: rgb(95, 46, 50);
+        margin-bottom: 0.2rem;
+        font-size: 1.1rem;
+    }
+    .blogpost .snippet {
+        color: #444;
+        font-size: 0.9rem;
+    }
+    .tags {
+        font-size: 0.8rem;
+        color: rgb(95, 46, 50);
+        margin-top: 0.4rem;
+    }
+    #searchInput {
+        padding: 10px;
+        width: 100%;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: rgb(228, 224, 212);
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        padding: 2rem;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .modal-content {
+        background: white;
+        margin: auto;
+        padding: 2rem;
+        border-radius: 12px;
+        max-width: 700px;
+    }
+    .modal-close {
+        float: right;
+        cursor: pointer;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #888;
+    }
+    </style>
+
 </head>
 
 <body>
@@ -47,40 +104,66 @@
                 <u><h1 id="header">blog</h1></u>
                 
                 <!-- blogposts section -->
-                <div class="blogpost">
-                    <h4> Feb. 25, 2025</h4>
-                    <p>SMILE :D RAWRRR</p> 
-                    <p>
-                        Tomorrow marks one month since my return from Brazil and im still so happy to have familial ties to such a beautiful country and peoples. 
-                        I've been thinking about my time there a lot and how much I miss all of it. i'm excited to go back and see my family again sooner than later. im already planning on what gifts i plan on bringing them for my next trip... :3
-                    </p>
-                    <p>i will not be updating this website in a HOT minute as i am also in my final semester of university... believe it or not but calculus + operating systems + software design + computer theory + a job + a life and family is a lot to juggle... teehee 💀
-                        but will update when possible (: i am worrking on an ai programme for sm of my favorite students so they 
-                        can learn python coding with ai agents! so at least one section will be getting updated soon!
-                    </p>
-                    <p>p.s. always remember that you can always find love around you if you just look</p>
+                <input type="text" id="searchInput" placeholder="Search blog posts..." onkeyup="filterPosts()" />
+                <br><br>
+                <div class="blog-grid" id="blogGrid"></div>
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="modal-close" onclick="closeModal()">&times;</span>
+                        <div id="modal-body"></div>
+                    </div>
                 </div>
-                <div class="blogpost">
-                    <h4> Jan. 03, 2025</h4>
-                    <p>Happy New Year and To New Beginnings! </p> 
-                    <p>i am writing this as i build the website. i had a nice amount of progress on the site today which is really great since i've been meaning to code and set everything up for a loooong  while. ive been excited about finishing the site and releasing it, so i am glad i finally got around to hosting it.
-                        these blog posts on my site will be mainly related to my thoughts on making stuff (code projects, art, music, etc.) and anything else i want to put on here. 
-                    </p>
-                    <p>im excited to add more things here the more i work on it. im excited for the new year and all to come.</p>
-                    <p>p.s. don't forget to tell your friends and family you love them today</p>
-                </div>
-
-                
             </main>
             
         </div>
     </div>
 
-
     <footer class="footer">
         <p>&copy; 2025 Claudia Yamamoto. All rights reserved.</p>
     </footer>
     
+    <!--blogpost js-->
+    <script>
+    let allPosts = [];
+
+    fetch('blogposts.json')
+    .then(res => res.json())
+    .then(data => {
+        allPosts = data;
+        const grid = document.getElementById('blogGrid');
+        data.forEach(post => {
+        const card = document.createElement('div');
+        card.className = 'blogpost';
+        card.setAttribute('data-id', post.id);
+        card.innerHTML = `
+            <h4>${post.title}</h4>
+            <div class="snippet">${post.snippet}</div>
+            <div class="tags">${post.tags.map(tag => '#' + tag).join(' ')}</div>
+        `;
+        card.addEventListener('click', () => openModal(post.id));
+        grid.appendChild(card);
+        });
+    });
+
+    function openModal(postId) {
+    const post = allPosts.find(p => p.id === postId);
+    const modalBody = document.getElementById('modal-body');
+    modalBody.innerHTML = `<h4>${post.title}</h4>` + post.content.map(p => `<p>${p}</p>`).join('');
+    document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+    }
+
+    function filterPosts() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    document.querySelectorAll('.blogpost').forEach(post => {
+        post.style.display = post.innerText.toLowerCase().includes(input) ? '' : 'none';
+    });
+    }
+    </script>
+    <!--global js file-->
     <script src="script.js"></script>
 </body>
 

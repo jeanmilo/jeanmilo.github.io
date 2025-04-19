@@ -39,7 +39,7 @@ aside {
 }
 
 main {
-    background-color: #e8e5db;
+    background-color: rgb(232, 229, 219);
     justify-content: center;
     margin-top: 0px;
     padding: 5%;
@@ -145,8 +145,11 @@ a:hover{
 }
 
 .blogpost {
-    box-shadow: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(244, 218, 85, 0.4);
+    margin: 1rem;
+    padding: 1.4rem;
+    border-radius: 12px;
 }
 
 .blogpost:hover {

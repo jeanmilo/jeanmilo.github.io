@@ -1,0 +1,45 @@
+[
+
+
+    {
+        "id": "3",
+        "title": "Apr. 18, 2025",
+        "snippet": "The Parable of a Brazilian programmer",
+        "tags": ["sick", "relaxed", "thoughts"],
+        "content": [
+        "This week was spring break!! I had so many plans and activities lined up, but sometimes, plans change.",
+        "and I can't lie... I was initially really upset about it. Especially cause I know whose fault it was for me getting sick (cough cough Jerry ლ(ಠ_ಠლ)). but regardless, things happen.",
+        "it's been a slow week, but thats never a bad thing. in times like these, i try to enjoy the moments of peace and quiet. there will come a time when i won't be able to slow down and enjoy simple things, so in the meantime, i will try to take it all in (inbetween sniffles and coughs ofc).",
+        "P.S. the old chinese farmer said it best: \"Good news? Bad news? Who can say.\""
+        ]
+    },
+
+    
+    {
+        "id": "2",
+        "title": "Feb. 25, 2025",
+        "snippet": "Tomorrow marks one month since my return from Brazil...",
+        "tags": ["travel", "family", "update"],
+        "content": [
+        "Tomorrow marks one month since my return from Brazil and I’m still so happy to have familial ties to such a beautiful country and people...",
+        "I’m working on an AI program to help some of my favorite students learn Python!",
+        "P.S. always remember that you can always find love around you if you just look."
+        ]
+    },
+
+    {
+        "id": "1",
+        "title": "Jan. 03, 2025",
+        "snippet": "Happy New Year and To New Beginnings!",
+        "tags": ["newyear", "projects", "thoughts"],
+        "content": [
+        "Happy New Year and To New Beginnings!",
+        "I’m writing this as I build the website. These blog posts will be mostly about code projects, art, music, etc.",
+        "I'm excited for the new year and all to come.",
+        "P.S. Don’t forget to tell your friends and family you love them today."
+        ]
+    }
+
+
+]
+  
