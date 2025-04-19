@@ -90,7 +90,7 @@
         color: #e23535;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         .blog-grid {
             grid-template-columns: minmax(170px,1fr);
         }
@@ -100,11 +100,11 @@
         }
 
         .blogpost h4 {
-            font-size: 1rem;
+            font-size: 15px;
         }
 
         .blogpost .snippet {
-            font-size: 0.88rem;
+            font-size: 13px;
         }
 
         .modal-content {
@@ -112,11 +112,37 @@
         }
 
         .tags {
-            font-size: 0.75rem;
+            font-size: 10px;
         }
     }
 
-    @media (max-width: 350px) {
+    @media (max-width: 470px) {
+        .blog-grid {
+            grid-template-columns: minmax(170px,1fr);
+        }
+
+        .blogpost {
+            padding: 1rem;
+        }
+
+        .blogpost h4 {
+            font-size: 13px;
+        }
+
+        .blogpost .snippet {
+            font-size: 11px;
+        }
+
+        .modal-content {
+            padding: 1rem;
+        }
+
+        .tags {
+            font-size: 9px;
+        }
+    }
+
+    @media (max-width: 400px) {
         .blog-grid {
             grid-template-columns: minmax(100px,1fr);
         }
@@ -126,30 +152,30 @@
         }
 
         .blogpost h4 {
-            font-size: 0.65rem;
+            font-size: 9px;
         }
 
         .blogpost .snippet {
-            font-size: 0.5rem;
+            font-size: 9px;
         }
 
         .tags {
-            font-size: 0.4rem;
+            font-size: 9px;
         }
 
         #searchInput {
-            font-size: 0.5rem;
+            font-size: 8px;
             padding: 5px;
         }
 
         .modal-content {
             padding: 0.7rem;
-            font-size: 0.6rem;
+            font-size: 9px;
             max-width: 70%;
         }
 
         .modal-close {
-            font-size: 1.3rem;
+            font-size: 9px;
         }
     }
     

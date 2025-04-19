@@ -10,13 +10,12 @@ body {
     margin: 0;
     background-image: url("images/backg.webp");
     background-repeat: repeat-y;
-    background-attachment: fixed;
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
 }
 
 aside {
-    font-size: 16px;
+    font-size: 13px;
     background-color: #e8e5db;
     position: static;
     margin-top: 0px;
@@ -131,7 +130,7 @@ a:hover{
 
 #gif{
     width: 60%;
-    max-width: 190px;
+    max-width: 200px;
     min-width: 110px;
 }
 
@@ -143,6 +142,11 @@ a:hover{
     margin: 1.4% 28%;
     text-align: center;
     font-size: 80%;
+}
+
+.navbutton {
+    display: block;
+    margin: 10px 0;
 }
 
 .image-container {
@@ -244,10 +248,6 @@ a:hover{
         font-size: 19px;
     }
     
-    #flex {
-        display: flex;
-    }
-    
     aside {
         font-size: 19px;
     }
@@ -257,18 +257,12 @@ a:hover{
         padding: 5%;
     }
     
-    .navbutton {
-        display: block;
-        margin: 10px 0;
-    }
-    
     #headerArea img {
         border-radius: 40px 40px 0 0;
         margin-top: 5%;
     }
     #gif {
-        height: 80%;
-        max-height: 190px;
+        max-width: 200px;
     }
 }
 
