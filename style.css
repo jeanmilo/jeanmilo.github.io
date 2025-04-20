@@ -147,7 +147,15 @@ a:hover{
 
 .navbutton {
     display: block;
-    margin: 10px 0;
+    margin: 4px 0;
+}
+
+.navbutton img {
+    width: 10%;
+    max-width: 60px;
+    min-width: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 .image-container {
