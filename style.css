@@ -278,7 +278,7 @@ ul li::marker {
         background-repeat: no-repeat;
         font-size: min(3.5vh, 3vw);
         width: 100%; 
-        margin-top: 3%;
+        margin-top: 4%;
         padding: 4% 0;
         border-radius: 14px 14px 0px 0px ;
         border-bottom: #c4c0b5 solid 4px;
@@ -303,6 +303,7 @@ ul li::marker {
         align-items: center;
         text-align: center;
         color: #372e29;
+        font-weight: bold;
         margin: 0 3px;
         vertical-align: middle;
         box-sizing: content-box;
@@ -356,11 +357,19 @@ ul li::marker {
     }
 
     #gif {
-        width: min(30vw, 110px);
+        width: min(30vw, 80px);
         margin: 2px 0;
         padding:0;
         max-width: 110px;
         min-width: 30px;
+    }
+}
+
+@media (max-width: 480px){
+    #gif {
+        width: min(40vw, 40px);
+        margin: 2px 0;
+        padding:0;
     }
 }
 
