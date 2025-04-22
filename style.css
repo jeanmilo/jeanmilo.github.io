@@ -272,7 +272,7 @@ ul li::marker {
         width: 100%; 
         margin-left: 1px;
         margin-top: 3%;
-        padding: 2% 0;
+        padding: 4% 0;
         border-radius: 14px 14px 0px 0px ;
         border-bottom: #c4c0b5 solid 4px;
     }
@@ -299,7 +299,6 @@ ul li::marker {
         background-color: rgba(159, 140, 200, .1);
         border-radius: 14px;
     }
-
 
     .navbutton img{
         display:inline-block;
@@ -333,8 +332,6 @@ ul li::marker {
     }
 }
 
-
-
 [title] {
     position: relative;
 }
@@ -343,7 +340,7 @@ ul li::marker {
     content: attr(title);
     position: absolute;
     left: 50%;
-    top: 100%; /* put it on the top */
+    top: 100%;
     background-color: #9f8cc8;
     width: max-content;
     opacity: 0;
@@ -356,25 +353,6 @@ ul li::marker {
     height: 100%;
     opacity: 1;
 }
-
-/* @media (min-width: 768px) {
-    body {
-        /* font-size: 19px; 
-    }
-    
-    main {
-        width: 80%;
-        padding: 5%;
-    }
-    
-    #headerArea img {
-        border-radius: 40px 40px 0 0;
-        margin-top: 5%;
-    }
-    #gif {
-        max-width: 200px;
-    }
-} */
 
 @media (min-width: 992px) {
     #container {
