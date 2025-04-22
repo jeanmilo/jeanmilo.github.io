@@ -249,6 +249,14 @@ ul li::marker {
     color: #724a4a;
 }
 
+#short {
+    display: none;
+}
+
+#wide {
+    display: inline-block;
+}
+
 @media (max-width: 768px) {
     body{
         font-size: min(3.5vh, 3.6vw); 
@@ -268,9 +276,8 @@ ul li::marker {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        font-size: min(3.5vh, 3.6vw);
+        font-size: min(3.5vh, 3vw);
         width: 100%; 
-        margin-left: 1px;
         margin-top: 3%;
         padding: 4% 0;
         border-radius: 14px 14px 0px 0px ;
@@ -290,25 +297,48 @@ ul li::marker {
     }
 
     .navbutton {
-        display: inline-block;
-        position: relative;
-        margin: 0px;
-        padding: 3px;
-        vertical-align: middle;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
         text-align: center;
-        background-color: rgba(159, 140, 200, .1);
-        border-radius: 14px;
+        color: #372e29;
+        margin: 0 3px;
+        vertical-align: middle;
+        box-sizing: content-box;
+        height: 25%;
     }
 
-    .navbutton img{
-        display:inline-block;
-        width: 100%;
-        max-width: 35px;
-        margin: 0 auto;
+    .navbutton .link {
+        display: flex;
+        align-items: center;
+        bottom: 0
+    }
+
+    .navbutton img {
+        width: min(10vw, 26px);
+        height: min(10vw, 26px); 
+        max-width: 90%; 
+        margin: 2px;
+        padding: 4px;
+        background-color: rgba(203, 188, 235, 0.3);
+        border: #372e29 solid 1px;
+        border-radius: 14px;
     }
 
     .links h3 {
         margin-top: 6%;
+    }
+
+    .short {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .wide {
+        display: none;
     }
 
     #flex {
@@ -326,9 +356,11 @@ ul li::marker {
     }
 
     #gif {
-        width: 55%;
+        width: min(30vw, 110px);
+        margin: 2px 0;
+        padding:0;
         max-width: 110px;
-        min-width: 40px;
+        min-width: 30px;
     }
 }
 
