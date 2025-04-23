@@ -249,17 +249,17 @@ ul li::marker {
     color: #724a4a;
 }
 
-#short {
+.short {
     display: none;
 }
 
-#wide {
+.wide {
     display: inline-block;
 }
 
 @media (max-width: 768px) {
     body{
-        font-size: min(3.5vh, 3.6vw); 
+        font-size: min(3.5vh, 3vw); 
     }
     
     main {
@@ -272,7 +272,7 @@ ul li::marker {
         justify-content: space-evenly;
         align-items: center;
         white-space: nowrap;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)), url('images/banner.png'); /* Set image opacity to half */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(246, 242, 202, 0.8)), url('images/banner.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -299,16 +299,11 @@ ul li::marker {
     .navbutton {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: center;
         color: #372e29;
         font-weight: bold;
-        margin: 0 3px;
+        margin: 0 auto;
         vertical-align: middle;
-        box-sizing: content-box;
-        height: 25%;
-    }
+        }
 
     .navbutton .link {
         display: flex;
